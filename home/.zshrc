@@ -10,8 +10,8 @@ setopt histignorealldups sharehistory
 bindkey -e
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
 # Use modern completion system
@@ -38,6 +38,16 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # homeshick
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+# aliases
+alias g="git"
+alias ls='ls --color=auto -F'
+alias ll="ls -l"
+alias la="ls -a"
+alias rm="rm -i"
+alias mv="mv -i"
+alias cp="cp -i"
+alias ..="cd .."
 
 # read local settings
 if [ -f ~/.zshlocal ]; then
