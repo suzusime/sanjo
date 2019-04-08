@@ -50,11 +50,12 @@ source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 # aliases
 source ~/.zsh/aliases.zsh
 
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # w3m
 source ~/.zsh/w3m.zsh
 
 # read local settings
-if [ -f ~/.zsh/local.zsh ]; then
-    source ~/.zsh/local.zsh
-fi
+[ -f ~/.zsh/local.zsh ] && source ~/.zsh/local.zsh
 
