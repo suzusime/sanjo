@@ -39,6 +39,11 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # enable typo correction
 setopt correct
 
+# enable auto suggestion
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=7"
+bindkey '^J' autosuggest-accept
+
 # homeshick
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
