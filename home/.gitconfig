@@ -12,6 +12,8 @@
     r = reset
     b = branch
     l = log
+[core]
+	editor = vim
 [include]
     path = .gitconfig.local
 
