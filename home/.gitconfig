@@ -1,0 +1,17 @@
+[user]
+    email = tamagawajousuiro+git@gmail.com
+    name = suzusime
+[alias]
+    cm = commit
+    co = checkout
+    a = add
+    s = status
+    st = status
+    cl = clone
+    p = push
+    r = reset
+    b = branch
+    l = log
+[include]
+    path = .gitconfig.local
+
