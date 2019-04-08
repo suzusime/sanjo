@@ -36,21 +36,17 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+# enable typo correction
+setopt correct
+
 # homeshick
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
 # aliases
-alias g="git"
-alias ls='ls --color=auto -F'
-alias ll="ls -l"
-alias la="ls -a"
-alias rm="rm -i"
-alias mv="mv -i"
-alias cp="cp -i"
-alias ..="cd .."
+source ~/.zsh/aliases.zsh
 
 # read local settings
-if [ -f ~/.zshlocal ]; then
-    source ~/.zshlocal
+if [ -f ~/.zsh/local.zsh ]; then
+    source ~/.zsh/local.zsh
 fi
 
