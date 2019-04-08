@@ -47,6 +47,20 @@ bindkey '^J' autosuggest-accept
 # homeshick
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
+# terminal setting
+case "${TERM}" in
+linux)
+    #export LANG=C
+    ;;
+fbterm)
+	echo -en "\e]P7c5c8c6" # 文字色を白にする 
+	;;
+xterm)
+    #export LANG=ja_JP.UTF-8
+    ;;
+esac
+
+
 # aliases
 source ~/.zsh/aliases.zsh
 
@@ -55,6 +69,9 @@ source ~/.zsh/aliases.zsh
 
 # w3m
 source ~/.zsh/w3m.zsh
+
+#fbterm
+alias fbterm='TERM=fbterm fbterm'
 
 # read local settings
 [ -f ~/.zsh/local.zsh ] && source ~/.zsh/local.zsh
