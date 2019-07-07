@@ -12,7 +12,7 @@ bindkey -e
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.zsh_history
+HISTFILE=$XDG_CONFIG_HOME/log/zsh_history
 
 # Use modern completion system
 autoload -Uz compinit
@@ -40,12 +40,12 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 setopt correct
 
 # enable auto suggestion
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $XDG_CONFIG_HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=7"
 bindkey '^J' autosuggest-accept
 
 # homeshick
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+source "$XDG_CONFIG_HOME/homesick/repos/homeshick/homeshick.sh"
 
 # terminal setting
 case "${TERM}" in
@@ -62,17 +62,17 @@ esac
 
 
 # aliases
-source ~/.zsh/aliases.zsh
+source $XDG_CONFIG_HOME/zsh/aliases.zsh
 
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $XDG_CONFIG_HOME/fzf.zsh ] && source $XDG_CONFIG_HOME/fzf.zsh
 
 # w3m
-source ~/.zsh/w3m.zsh
+source $XDG_CONFIG_HOME/zsh/w3m.zsh
 
 #fbterm
 alias fbterm='TERM=fbterm fbterm'
 
 # read local settings
-[ -f ~/.zsh/local.zsh ] && source ~/.zsh/local.zsh
+[ -f $XDG_CONFIG_HOME/zsh/local.zsh ] && source $XDG_CONFIG_HOME/zsh/local.zsh
 
