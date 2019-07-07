@@ -65,7 +65,7 @@ esac
 source $XDG_CONFIG_HOME/zsh/aliases.zsh
 
 # fzf
-[ -f $XDG_CONFIG_HOME/fzf.zsh ] && source $XDG_CONFIG_HOME/fzf.zsh
+[ -f $XDG_CONFIG_HOME/fzf/fzf.zsh ] && source $XDG_CONFIG_HOME/fzf/fzf.zsh
 
 # w3m
 source $XDG_CONFIG_HOME/zsh/w3m.zsh
