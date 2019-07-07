@@ -45,7 +45,7 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=7"
 bindkey '^J' autosuggest-accept
 
 # homeshick
-source "$XDG_CONFIG_HOME/homesick/repos/homeshick/homeshick.sh"
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
 # terminal setting
 case "${TERM}" in
