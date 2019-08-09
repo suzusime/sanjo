@@ -70,8 +70,11 @@ source $XDG_CONFIG_HOME/zsh/aliases.zsh
 # w3m
 source $XDG_CONFIG_HOME/zsh/w3m.zsh
 
-#fbterm
+# fbterm
 alias fbterm='TERM=fbterm fbterm'
+
+# anyenv
+eval "$(anyenv init -)"
 
 # read local settings
 [ -f $XDG_CONFIG_HOME/zsh/local.zsh ] && source $XDG_CONFIG_HOME/zsh/local.zsh

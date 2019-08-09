@@ -13,7 +13,7 @@
     b = branch
     l = log
 [core]
-	editor = vim
+    editor = vim
 [include]
     path = .gitconfig.local
 
